@@ -16,35 +16,71 @@ public class ArrayIndexList<E> implements IndexList<E> {
 	
 
 	public void add(int index, E e) throws IndexOutOfBoundsException {
-		// ADD CODE AS REQUESTED BY EXERCISES
+		
+		if(index > size || index < 0){
+			throw new IndexOutOfBoundsException("add: Invalid Index = " + index);
+		}
+		element[index] = e;
+		size++;
 	}
 
 
 	public void add(E e) {
-		// ADD CODE AS REQUESTED BY EXERCISES
+		
+		if(size == element.length){
+			changeCapacity(CAPTOAR);
+		}
+		
+		element[size] = e;
+		size++;
+		
 	}
 
 
 	public E get(int index) throws IndexOutOfBoundsException {
-		// ADD AND MODIGY CODE AS REQUESTED BY EXERCISES
-		return null; 
+		if(index > size || index < 0){
+			throw new IndexOutOfBoundsException("add: Invalid Index = " + index);
+		}
+		return element[index]; 
 	}
 
 
 	public boolean isEmpty() {
-		return size == 0;
+		if(size == 0){
+			return true;
+		}
+		else
+			return false;
 	}
 
 
 	public E remove(int index) throws IndexOutOfBoundsException {
-		// ADD AND MODIFY CODE AS REQUESTED BY EXERCISES
-		return null;
+		
+		int number = 0;
+		if(index > size || index < 0){
+			throw new IndexOutOfBoundsException("add: Invalid Index = " + index);
+		}
+		
+		size--;
+//		for(int i = 0; i < element.length; i++){
+//			if(element[i] == null){
+//				number++;
+//			}
+//		}
+//		
+//		if(number == MAXEMPTYPOS){
+//			changeCapacity(-CAPTOAR);
+//		}
+		
+		return element[index];
 	}
 
 
 	public E set(int index, E e) throws IndexOutOfBoundsException {
-		// ADD AND MODIFY CODE AS REQUESTED BY EXERCISES
-		return null;
+		if(index > size || index < 0){
+			throw new IndexOutOfBoundsException("add: Invalid Index = " + index);
+		}
+		return (element[index] = e);
 	}
 
 

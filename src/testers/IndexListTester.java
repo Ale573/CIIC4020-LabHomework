@@ -48,10 +48,10 @@ public class IndexListTester {
 		showListAfterAdding(list, 3,  700); 
 
 
-		while (!list.isEmpty()) { 
-			showListAfterDeleting(list, list.size()-1); 
-			showListAfterDeleting(list, 0); 
-		}
+//		while (!list.isEmpty()) { 
+//			showListAfterDeleting(list, list.size()-1); 
+//			showListAfterDeleting(list, 0); 
+//		}
 
 		
 		showListAfterAdding(list, 0,  700); 

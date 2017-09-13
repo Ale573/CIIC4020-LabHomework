@@ -54,6 +54,6 @@ public interface IndexList<T> {
 	 **/ 
 	void add(T e); 
 	
-	// int capacity(); 
+	 int capacity(); 
 
 }

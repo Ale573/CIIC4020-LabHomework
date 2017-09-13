@@ -62,12 +62,12 @@ public class ArrayIndexList<E> implements IndexList<E> {
 		E oldValue = element[index];
 		int number = 0;
 		
-		if(index > size || index < 0){
+		if(index > size || index < 0|| isEmpty()){
 			throw new IndexOutOfBoundsException("add: Invalid Index = " + index);
 		}
 		else{
 			
-			moveDataOnePositionTL(index,size-1);
+			moveDataOnePositionTL(index+1,size-1);
 			
 			for(int i = size; i < element.length;i++){
 				if(element[i] == null){
